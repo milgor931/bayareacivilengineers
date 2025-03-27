@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanchez Electric</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="/"><img src="./assets/logo.png" /></a>
+            <h1>Bay Area Civil Engineers</h1>
+        </div>
+        <nav>
+            <ul class="desktop-menu">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="fade-in">
+        <div class="hero-content">
+
+            <div class="title">
+                <h1>Precision. Expertise. Excellence.</h1>
+            </div>
+            <p>With 30+ years of experience, BACE delivers expert civil engineering solutions, ensuring seamless
+                compliance and project success.</p>
+            <a href="#contact">
+                <button class="estimateButton">Get a free quote</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us">
+        <div class="why-container">
+            <div class="why-text">
+                <h2>Reliable Engineering Services for Homes & Businesses</h2>
+                <p><strong>BACE</strong> brings over 30 years of experience in civil engineering design, working across
+                    public and private sectors. Our expertise spans high-tech commercial developments, residential
+                    grading projects, school facility designs, roadway design with ADA compliance, and local
+                    jurisdiction requirements.</p>
+
+                <br />
+                <h3>Our Expertise</h3>
+                <ul>
+                    <li>Project planning and conceptual design</li>
+                    <li>Hydraulic studies and parking lot design</li>
+                    <li>Grading and improvement design</li>
+                    <li>Plans and specification preparation</li>
+                </ul>
+
+                <br />
+                <h3>Stormwater Compliance</h3>
+                <p>BACE is a Qualified Storm Water Pollution Prevention Plan (SWPPP) Developer (QSD) and is well-versed
+                    in all Bay Area regional stormwater requirements.</p>
+            </div>
+            <!-- <div class="why-image">
+                <img src="/assets/home.jpg" alt="Cozy Home">
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Expertise in Municipal Compliance</h3>
+                <p>BACE is your best solution for meeting municipal requests for residential and commercial civil
+                    engineering projects.</p>
+            </div>
+            <div class="service-item">
+                <h3>Public Works Encroachment Plans</h3>
+                <p>All design and utilities extending beyond your property line require an encroachment permit with your
+                    local municipality. BACE ensures compliance with these regulations.</p>
+            </div>
+            <div class="service-item">
+                <h3>Pavement Analysis & Maintenance</h3>
+                <p>We provide AC pavement analysis to support your parking lot maintenance projects.</p>
+            </div>
+            <div class="service-item">
+                <h3>Storm Water Compliance (SWPPP)</h3>
+                <p>As a Qualified Storm Water Pollution Prevention Plan (SWPPP) Developer (QSD), BACE meets California
+                    state requirements for SWPPP compliance.</p>
+            </div>
+            <div class="service-item">
+                <h3>Utility Planning & Design</h3>
+                <p>We specialize in utility planning and design, ensuring projects meet municipal permitting standards.
+                </p>
+            </div>
+            <div class="service-item">
+                <h3>Drainage Design Solutions</h3>
+                <p>BACE delivers drainage designs that comply with Bay Area stormwater standards for small and
+                    medium-sized projects.</p>
+            </div>
+            <div class="service-item">
+                <h3>ADA Compliance & Grading Standards</h3>
+                <p>Our expertise in ADA requirements ensures your project meets current grading standards.</p>
+            </div>
+            <div class="service-item">
+                <h3>Site Grading & Municipal Standards</h3>
+                <p>We provide site grading solutions that align with Bay Area municipal regulations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        
+    </section>
+
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Bay Area Civil Engineers (BACE) is dedicated to providing expert design services for small to medium-sized
+            civil engineering projects.
+        </p>
+        <br />
+        <p>
+            Serving the Bay Area since 1998, BACE brings over 30 years of experience in residential and commercial
+            design, ensuring high-quality solutions tailored to local needs.
+        </p>
+        <br />
+        <p>
+            As licensed Civil Engineers in the State of California, our deep understanding of Bay Area regulations and
+            standards makes us the premier choice for maximizing project value.</p>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
+        <h2>Contact Us</h2>
+        <p>If you need reliable civil engineering services, contact us for a free estimate!</p>
+
+        <form id="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Education</h3>
+                <p>B.S. Civil Engineering,<br />Cal Poly State University</p>
+            </div>
+            <div class="footer-section">
+                <h3>Licensure</h3>
+                <p>California Professional Civil Engineer,<br />Qualified SWPPP Developer</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><a href="#contact">Send a message</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Website created by <strong>Milana Gorobchenko</strong></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
