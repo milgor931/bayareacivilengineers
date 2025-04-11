@@ -135,38 +135,57 @@ header .menu-toggle {
 
 
 
-#hero {
-    /* background-image: url('your-image-path.jpg'); */
+/* #hero {
+    background-image: url('assets/2.png');
     background-size: cover;
     background-position: center;
     color: #222;
     text-align: center;
-    /* padding: 100px 20px; */
-}
+    padding: 100px 20px;
+} */
+
+#hero {
+    position: relative;
+    z-index: 0;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/bayarea.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* Adjust this for desired transparency */
+    z-index: -1;
+  }
+  
 
 .hero-content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 50vh;
-    padding-top: 100px;
+    min-height: 70vh;
+    padding: 100px;
+    text-align: center;
 }
 
 .hero-content .title {
-    max-width: 1000px;
-
 }
 
 #hero h1 {
     font-size: 2.5rem;
-    color: #0086af;
+    color: #def8ff;
 }
 
 #hero p {
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 400;
     max-width: 500px;
+    color: white;
 }
 
 #hero .estimateButton {
@@ -258,17 +277,37 @@ form button:hover {
 
 /* Services Section Styling */
 #services {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 10%;
+  }
+  
+  #services::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('assets/streets.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4; /* Adjust this for desired transparency */
+    z-index: -1;
+  }
+/* 
+#services {
     background-color: #0086af;
     width: 100%;
     text-align: center;
     margin: 0;
     padding: 10%;
-}
+} */
 
 #services h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-bottom: 20px;
-    color: white;
+    color: #0086af;
 }
 
 .services-grid {
@@ -368,16 +407,28 @@ form button:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+#talkToUs {
+    margin: 0;
+    padding: 0;
+}
+
+#talkToUs img {
+    width: 100vw;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .why-container {
         flex-direction: column;
-        /* text-align: center; */
     }
 
     .why-text li {
         justify-content: center;
     }
+}
+
+#contact {
+    padding: 15%;
 }
 
 
@@ -388,6 +439,7 @@ form button:hover {
     color: white;
     padding: 40px 20px;
     text-align: center;
+    margin: 0;
 }
 
 .footer-container {

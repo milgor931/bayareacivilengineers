@@ -10,8 +10,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="icon" href="/assets/favicon.png" />
     <link rel="stylesheet" href="styles.css">
+
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({ publicKey: "user_OEd7L0KxbvtyC8Lt6BPdQ" });
+        })();
+    </script>
+
 </head>
 
 <body>
@@ -43,7 +51,6 @@
     <!-- Hero Section -->
     <section id="hero" class="fade-in">
         <div class="hero-content">
-
             <div class="title">
                 <h1>Precision. Expertise. Excellence.</h1>
             </div>
@@ -80,10 +87,15 @@
                     in all Bay Area regional stormwater requirements.</p>
             </div>
             <!-- <div class="why-image">
-                <img src="/assets/home.jpg" alt="Cozy Home">
+                <img src="/assets/2.png" alt="Cozy Home">
             </div> -->
         </div>
     </section>
+
+    <!-- <section id="talkToUs">
+        <img src="assets/speech.png"/>
+    </section> -->
+
 
     <!-- Services Section -->
     <section id="services">
@@ -153,7 +165,6 @@
             standards makes us the premier choice for maximizing project value.</p>
     </section>
 
-
     <!-- Contact Section -->
     <section id="contact" class="fade-in">
         <h2>Contact Us</h2>
@@ -165,6 +176,9 @@
 
             <label for="email">Your Email:</label>
             <input type="email" id="email" name="email" required>
+
+            <label for="phoneNumber">Your Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" required>
 
             <label for="message">Message:</label>
             <textarea id="message" name="message" required></textarea>

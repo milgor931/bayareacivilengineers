@@ -1,4 +1,4 @@
-document.getElementById("contact-form").addEventListener("submit", function(event) {
+document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault();
 
     const name = document.getElementById("name").value;
@@ -52,3 +52,24 @@ document.addEventListener("DOMContentLoaded", function () {
     checkFade(); // Run once on load in case elements are already in view
 });
 
+window.onload = function () {
+    fetch('config.json')
+        .then(response => response.json())
+        .then(config => {
+            const SERVICE_ID = config.SERVICE_ID;
+            const TEMPLATE_ID = config.TEMPLATE_ID;
+
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
+                    .then(response => {
+                        console.log('SUCCESS!', response.status, response.text);
+                        alert('Email successfully sent!');
+                    }, error => {
+                        console.log('FAILED...', error);
+                        alert('Failed to send email, please try again.');
+                    });
+            });
+        });
+
+}
