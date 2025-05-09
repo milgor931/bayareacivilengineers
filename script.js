@@ -1,3 +1,6 @@
+const SERVICE_ID = "service_pxk0owd"
+const TEMPLATE_ID = "template_ykz8t29"
+
 document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault();
 
