@@ -188,18 +188,19 @@ header .menu-toggle {
     color: white;
 }
 
-#hero .estimateButton {
+#hero .quoteButton {
     padding: 10px 15px;
-    background-color: #0086af;
+    background-color: #2db300;
     color: white;
     border: none;
     border-radius: 10px;
-    margin: 20px;
+    margin-top: 20px;
     font-family: inherit;
     font-weight: bolder;
+    font-size: 1rem;
 }
 
-#hero .estimateButton:hover {
+#hero .quoteButton:hover {
     background-color: #0086af;
 }
 
