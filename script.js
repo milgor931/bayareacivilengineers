@@ -1,20 +1,6 @@
 const SERVICE_ID = "service_pxk0owd"
 const TEMPLATE_ID = "template_ykz8t29"
 
-document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
-    // Simulate sending the form data
-    alert(`Message from ${name} (Email: ${email})\nMessage: ${message}`);
-
-    // Reset the form
-    document.getElementById("contact-form").reset();
-});
-
 document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.getElementById("sidebar");
     const menuToggle = document.getElementById("menu-toggle");
@@ -56,23 +42,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 window.onload = function () {
-    fetch('config.json')
-        .then(response => response.json())
-        .then(config => {
-            const SERVICE_ID = config.SERVICE_ID;
-            const TEMPLATE_ID = config.TEMPLATE_ID;
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        
+        // Simulate sending the form data
+        let statusSpan = document.getElementById("status");
 
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
-                    .then(response => {
-                        console.log('SUCCESS!', response.status, response.text);
-                        alert('Email successfully sent!');
-                    }, error => {
-                        console.log('FAILED...', error);
-                        alert('Failed to send email, please try again.');
-                    });
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, this)
+            .then(response => {
+                console.log('SUCCESS!', response.status, response.text);
+                statusSpan.innerText = "Message sent successfully!";
+                // Reset the form
+        document.getElementById("contact-form").reset();
+            }, error => {
+                console.log('FAILED...', error);
+                statusSpan.innerText = "Failed to send email, please try again.";
             });
-        });
-
+    });
 }
